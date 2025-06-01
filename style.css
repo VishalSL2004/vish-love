@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+h1, h2 {
+  color: #ff5e78;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ff5e78;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #ff5e78;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff3e57;
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 20px 0;
+}
+
+.heart-bg::before {
+  content: '💖 💘 💝 💕 💓 💞 💗';
+  font-size: 3rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: hearts 10s linear infinite;
+  color: rgba(255, 105, 180, 0.2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  pointer-events: none;
+}
+.final-msg {
+  animation: fadeIn 2s ease-in-out;
+  font-size: 1.1rem;
+  color: #ff4081;
+  margin-top: 1rem;
+}
+
+.final-msg h3 {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes hearts {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+@media screen and (max-width: 500px) {
+  h1, h2 {
+    font-size: 1.6rem;
+  }
+  .quote-text {
+    font-size: 1rem;
+  }
+  input, button {
+    font-size: 1rem;
+  }
+}

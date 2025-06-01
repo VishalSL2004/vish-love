@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Quote Game 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="heart-bg"></div>
+
+  <div class="container">
+    <div id="inputSection">
+      <h1>Hey Love! 💘</h1>
+      <p>Enter your name to start this lovely game...</p>
+      <input type="text" id="nameInput" placeholder="Your Name" />
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="quoteSection" style="display: none;">
+      <h2 id="greetingText"></h2>
+      <p class="quote-text" id="quoteDisplay">💬</p>
+      <button onclick="showNextQuote()">Next Quote</button>
+      <button onclick="restart()">Restart</button>
+    </div>
+    <audio id="bgMusic" src="./love-bgm.mp3" autoplay loop hidden></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
